@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'MyApps1/base.html' %}
+{% block body_block %}
+<h2>Employee Information</h2>
+    <hr/>
+    <table border="2">
+    <thead>
+    <th>EmpNo</th>
+    <th>EmpName</th>
+    <th>Salary</th>
+    <th>Address</th>
+    </thead>
+    <tbody>
+        {% for e in employees %}
+        <tr>
+            <td>{{ e.eno }}</td>
+            <td>{{ e.ename }}</td>
+            <td>{{ e.esal }}</td>
+            <td>{{ e.eaddr }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+    <br/>
+{% endblock %}
